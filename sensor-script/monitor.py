@@ -12,7 +12,7 @@ from itertools import count
 # on the supplied interval.
 def make_schedule(interval):
     start = round(time.time(),2)
-    sched = ((start + (i * interval)) - time.time() for i in count)
+    sched = ((start + (i * interval)) - time.time() for i in count())
     return sched
 
 
@@ -26,7 +26,7 @@ def main():
     # a generator which produces the target time of
     # the next reading.  Change its argument to whatever
     # interval you want to log at.
-    schedule = make_schedul(interval)
+    schedule = make_schedule(interval)
     # shortcut to generate current time.
     now = lambda: int(time.time())  
     # list of headers for the csv file.
