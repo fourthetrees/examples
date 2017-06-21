@@ -17,7 +17,7 @@ In [1]: import psql
 In [2]: config = {'user':'username','password':'somepass','table':'testing'}
 
 In [3]: psql.execute(config,"CREATE TABLE testing(col1 INT, col2 INT)")
-Out[3]: {}
+Out[3]: []
 
 In [4]: psql.push(config,[(123,456),(111,222)])
 pushing 2 rows to testing...
@@ -27,7 +27,7 @@ In [5]: psql.execute(config,"SELECT * FROM testing")
 Out[5]: [(123, 456), (111, 222)]
 
 In [6]: psql.execute(config,"DROP TABLE testing")
-Out[6]: {}
+Out[6]: []
 
 ```
 
